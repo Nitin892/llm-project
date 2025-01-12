@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import FetchData from './component/FetchData';
+
 
 function App() {
   const [question, setQuestion] = useState('');
@@ -71,6 +73,9 @@ function App() {
         {loading && <p>Loading...</p>}
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {answer && <p><strong>Answer:</strong> {answer}</p>}
+      </div>
+      <div>
+      <FetchData/>
       </div>
     </div>
   );
